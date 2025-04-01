@@ -42,6 +42,7 @@ NESTED_MORSE = {
 
 ERR = "AssertionError: the arguments are bad"
 
+
 def main():
     try:
         assert len(sys.argv) == 2, ERR
