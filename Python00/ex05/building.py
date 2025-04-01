@@ -1,4 +1,5 @@
 import sys
+import string
 
 
 class lexeur:
@@ -6,7 +7,7 @@ class lexeur:
         self.txt = txt
 
     def charNb(self):
-        return len(self.txt) - 1
+        return len(self.txt)
 
     def upperNb(self):
         return sum(1 for c in self.txt if c.isupper())
@@ -15,7 +16,7 @@ class lexeur:
         return sum(1 for c in self.txt if c.islower())
 
     def punctNb(self):
-        return sum(1 for c in self.txt if c in ".?1,:;")
+        return sum(1 for c in self.txt if c in string.punctuation)
 
     def spaceNb(self):
         return sum(1 for c in self.txt if c.isspace())
@@ -25,13 +26,17 @@ class lexeur:
 
 
 def main():
-    assert len(sys.argv) <= 2, "Too many arguments"
+    try:
+        assert len(sys.argv) <= 2, "Too many arguments"
+    except AssertionError as e:
+        print(e)
+        return 1
 
     if len(sys.argv) == 2:
         text = sys.argv[1]
     else:
         print("What is the text to count?")
-        text = sys.stdin.read()
+        text = input()
 
     lex = lexeur(text)
 
