@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: ft_package
+Version: 0.0.1
+Summary: A sample test package
+Author-email: Quentin <qbanet@student.42Perpignan.fr>
+License: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# ft_package
+
+Un petit package Python contenant une fonction `count_in_list` qui compte les occurrences d’un élément dans une liste.
