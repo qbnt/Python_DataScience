@@ -1,6 +1,7 @@
 import time
 import shutil
 
+
 def ft_tqdm(lst: range) -> None:
     """Affiche une barre de chargement façon tqdm, avec yield."""
     total = len(lst)
