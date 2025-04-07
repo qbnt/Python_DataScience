@@ -14,7 +14,7 @@ def ft_invert(array) -> array:
 def ft_red(array) -> array:
     """Reding the picture"""
     res = numpy.copy(array)
-    res = [[[pix[0],0,0]for pix in row]for row in res]
+    res = [[[pix[0], 0, 0]for pix in row]for row in res]
     return res
 
 
@@ -39,12 +39,14 @@ def ft_grey(array):
     grey = ImageOps.grayscale(grey)
     return numpy.array(grey)
 
+
 def do_img(array, function, save_to):
     """Save the image"""
     new = function(array)
     new = numpy.array(new, dtype=numpy.uint8)
     new = Image.fromarray(new)
     new.save(save_to + ".jpeg")
+
 
 def main():
     img = ft_load("landscape.jpg")

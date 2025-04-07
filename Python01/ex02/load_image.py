@@ -3,6 +3,7 @@ import numpy
 
 
 def ft_load(path: str) -> numpy.array:
+    """Load an image from a file into a 2D array of pixels."""
     try:
         img = Image.open(path)
     except FileNotFoundError as e:
